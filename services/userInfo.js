@@ -19,6 +19,16 @@ const user = {
   },
 
   /**
+   * 查找所有用户信息
+   * @param  {}
+   * @return {object|null}      查找结果
+   */
+  async getAll() {
+    let resultData = await userModel.getAll()
+    return resultData
+  },
+
+  /**
    * 查找存在用户信息
    * @param  {object} formData 查找的表单数据
    * @return {object|null}      查找结果

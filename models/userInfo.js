@@ -8,7 +8,7 @@ const user = {
    * @return {object}       mysql执行结果
    */
   async create ( model ) {
-    let result = await dbUtils.insertData( 'user_info', model )
+    let result = await dbUtils.insertData( 'userInfo', model )
     return result
   },
 
@@ -19,7 +19,7 @@ const user = {
    */
   async getExistOne(options ) {
     let _sql = `
-    SELECT * from user_info
+    SELECT * from userInfo
       where email="${options.email}" or name="${options.name}"
       limit 1`
     let result = await dbUtils.query( _sql )
@@ -32,13 +32,24 @@ const user = {
   },
 
   /**
+   * 查找所有用户数据
+   * @param  {}
+   * @return {object|null}        查找结果
+   */
+  async getAll(options ) {
+    let _sql = `SELECT * from userInfo`
+    let result = await dbUtils.query( _sql )
+    return result
+  },
+
+  /**
    * 根据用户名和密码查找用户
    * @param  {object} options 用户名密码对象
    * @return {object|null}         查找结果
    */
   async getOneByUserNameAndPassword( options ) {
     let _sql = `
-    SELECT * from user_info
+    SELECT * from userInfo
       where password="${options.password}" and name="${options.name}"
       limit 1`
     let result = await dbUtils.query( _sql )
@@ -58,7 +69,7 @@ const user = {
   async getUserInfoByUserName( userName ) {
 
     let result = await dbUtils.select(
-      'user_info',
+      'userInfo',
       ['id', 'email', 'name', 'detail_info', 'create_time', 'modified_time', 'modified_time' ])
     if ( Array.isArray(result) && result.length > 0 ) {
       result = result[0]
@@ -67,9 +78,6 @@ const user = {
     }
     return result
   },
-
-
-
 }
 
 

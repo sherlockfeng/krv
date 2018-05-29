@@ -18,20 +18,6 @@ app.use(bodyparser({
 
 app.use(json())
 
-// app.use(logger())
-app.use(async (ctx, next) => {
-  const start = new Date()
-  let ms = 0
-  try {
-    await next()
-    ms = new Date() - start
-    logUtil.logResponse(ctx, ms)
-  } catch (error) {
-    ms = new Date() -start
-    logUtil.logError(ctx, error, ms)
-  }
-})
-
 app.use(require('koa-static')(__dirname + '/static'))
 
 app.use(views(__dirname + '/views', {
@@ -40,23 +26,25 @@ app.use(views(__dirname + '/views', {
 
 // logger
 app.use(async (ctx, next) => {
+  
   //响应开始时间
-  const start = new Date();
+  const start = new Date()
   //响应间隔时间
-  var ms;
+  let ms = 0
   try {
     //开始进入到下一个中间件
-    await next();
+    await next()
 
-    ms = new Date() - start;
+    ms = new Date() - start
     //记录响应日志
-    logUtil.logResponse(ctx, ms);
+    logUtil.logResponse(ctx, ms)
 
   } catch (error) {
     
-    ms = new Date() - start;
+    ms = new Date() - start
+
     //记录异常日志
-    logUtil.logError(ctx, error, ms);
+    logUtil.logError(ctx, error, ms)
   }
 })
 

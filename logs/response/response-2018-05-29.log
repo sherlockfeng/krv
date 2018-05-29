@@ -1,0 +1,217 @@
+[2018-05-29T15:57:32.595] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::1
+request query:  {}
+response time: 1101
+response status: 200
+response body: 
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*************** response log end ***************
+
+[2018-05-29T15:57:34.955] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /stylesheets/style.css
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 404
+response body: 
+undefined
+*************** response log end ***************
+
+[2018-05-29T15:57:36.045] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 404
+response body: 
+undefined
+*************** response log end ***************
+
+[2018-05-29T17:25:51.374] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /
+request client ip:  ::1
+request query:  {}
+response time: 460
+response status: 200
+response body: 
+"<!DOCTYPE html><html><head><title>Hello Koa 2!</title><link rel=\"stylesheet\" href=\"/stylesheets/style.css\"></head><body><h1>Hello Koa 2!</h1><p>Welcome to Hello Koa 2!</p></body></html>"
+*************** response log end ***************
+
+[2018-05-29T17:25:54.158] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /stylesheets/style.css
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 404
+response body: 
+undefined
+*************** response log end ***************
+
+[2018-05-29T17:25:54.397] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 404
+response body: 
+undefined
+*************** response log end ***************
+
+[2018-05-29T18:28:11.049] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users
+request client ip:  ::1
+request query:  {}
+response time: 1
+err name: TypeError
+err message: userServer.getAll is not a function
+err stack: TypeError: userServer.getAll is not a function
+    at users (D:\personal\project\krv\controllers\users.js:4:31)
+    at dispatch (D:\personal\project\krv\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (D:\personal\project\krv\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at D:\personal\project\krv\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (D:\personal\project\krv\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at D:\personal\project\krv\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (D:\personal\project\krv\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (D:\personal\project\krv\node_modules\koa-compose\index.js:42:32)
+    at next (D:\personal\project\krv\node_modules\koa-compose\index.js:43:18)
+    at app.use (D:\personal\project\krv\app.js:36:11)
+    at dispatch (D:\personal\project\krv\node_modules\koa-compose\index.js:42:32)
+    at next (D:\personal\project\krv\node_modules\koa-compose\index.js:43:18)
+    at views (D:\personal\project\krv\node_modules\koa-views\lib\index.js:61:12)
+    at dispatch (D:\personal\project\krv\node_modules\koa-compose\index.js:42:32)
+    at next (D:\personal\project\krv\node_modules\koa-compose\index.js:43:18)
+    at send.then.done (D:\personal\project\krv\node_modules\koa-static\index.js:43:20)
+*************** error log end ***************
+
+[2018-05-29T18:28:14.602] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /favicon.ico
+request client ip:  ::1
+request query:  {}
+response time: 0
+response status: 404
+response body: 
+undefined
+*************** response log end ***************
+
+[2018-05-29T18:28:32.713] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users
+request client ip:  ::1
+request query:  {}
+response time: 0
+err name: TypeError
+err message: userServer.getAll is not a function
+err stack: TypeError: userServer.getAll is not a function
+    at users (D:\personal\project\krv\controllers\users.js:4:31)
+    at dispatch (D:\personal\project\krv\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (D:\personal\project\krv\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at D:\personal\project\krv\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (D:\personal\project\krv\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at D:\personal\project\krv\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (D:\personal\project\krv\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (D:\personal\project\krv\node_modules\koa-compose\index.js:42:32)
+    at next (D:\personal\project\krv\node_modules\koa-compose\index.js:43:18)
+    at app.use (D:\personal\project\krv\app.js:36:11)
+    at dispatch (D:\personal\project\krv\node_modules\koa-compose\index.js:42:32)
+    at next (D:\personal\project\krv\node_modules\koa-compose\index.js:43:18)
+    at views (D:\personal\project\krv\node_modules\koa-views\lib\index.js:61:12)
+    at dispatch (D:\personal\project\krv\node_modules\koa-compose\index.js:42:32)
+    at next (D:\personal\project\krv\node_modules\koa-compose\index.js:43:18)
+    at send.then.done (D:\personal\project\krv\node_modules\koa-static\index.js:43:20)
+*************** error log end ***************
+
+[2018-05-29T18:29:04.463] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /string
+request client ip:  ::1
+request query:  {}
+response time: 1
+response status: 200
+response body: 
+"koa2 string"
+*************** response log end ***************
+
+[2018-05-29T18:30:40.641] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /users
+request client ip:  ::1
+request query:  {}
+response time: 20
+err name: Error
+err message: ER_NO_SUCH_TABLE: Table 'TradeAdmin.userInfo' doesn't exist
+err stack: Error: ER_NO_SUCH_TABLE: Table 'TradeAdmin.userInfo' doesn't exist
+    at Query.Sequence._packetToError (D:\personal\project\krv\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (D:\personal\project\krv\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (D:\personal\project\krv\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (D:\personal\project\krv\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\personal\project\krv\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\personal\project\krv\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+    --------------------
+    at Protocol._enqueue (D:\personal\project\krv\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at PoolConnection.query (D:\personal\project\krv\node_modules\mysql\lib\Connection.js:208:25)
+    at pool.getConnection (D:\personal\project\krv\utils\dbUtil.js:20:20)
+    at Handshake.onConnect [as _callback] (D:\personal\project\krv\node_modules\mysql\lib\Pool.js:64:7)
+    at Handshake.Sequence.end (D:\personal\project\krv\node_modules\mysql\lib\protocol\sequences\Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (D:\personal\project\krv\node_modules\mysql\lib\protocol\sequences\Sequence.js:97:8)
+    at Protocol._parsePacket (D:\personal\project\krv\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (D:\personal\project\krv\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (D:\personal\project\krv\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (D:\personal\project\krv\node_modules\mysql\lib\Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:607:20)
+*************** error log end ***************
+
+[2018-05-29T18:35:41.308] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users
+request client ip:  ::1
+request query:  {}
+response time: 5
+response status: 200
+response body: 
+"this is a users response!"
+*************** response log end ***************
+
+[2018-05-29T18:35:59.926] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /users
+request client ip:  ::1
+request query:  {}
+response time: 3
+response status: 200
+response body: 
+"this is a users response!"
+*************** response log end ***************
+

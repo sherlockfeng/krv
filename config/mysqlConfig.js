@@ -6,9 +6,9 @@ const config = {
     database: {
       DATABASE: 'TradeAdmin',
       USERNAME: 'root',
-      PASSWORD: '',
+      PASSWORD: 'gmmdbdev',
       PORT: '3306',
-      HOST: ''
+      HOST: '10.240.17.237'
     }
   }
 }
