@@ -70,7 +70,7 @@ const user = {
 
     let result = await dbUtils.select(
       'userInfo',
-      ['id', 'email', 'name', 'detail_info', 'create_time', 'modified_time', 'modified_time' ])
+      ['id', 'email', 'name', 'detail_info', 'create_time', 'modified_time' ])
     if ( Array.isArray(result) && result.length > 0 ) {
       result = result[0]
     } else {
