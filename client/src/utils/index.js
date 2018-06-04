@@ -1,7 +1,5 @@
 import axios from 'axios'
-import Vue from 'vue'
 import { Modal } from 'iview'
-Vue.$Modal = Modal
 
 const Utils = {
     /**
@@ -33,20 +31,20 @@ const Utils = {
           }
       }).catch((error) => {
           if (error.message.indexOf('timeout') > -1) { //超时提示
-            Vue.$Modal.info({
+            Modal.info({
                 title: '请求超时',
                 content: '请求超时，请稍后再试',
             })
             setTimeout(()=>{
-                Vue.$Modal.remove()
+                Modal.remove()
             },1000)
           } else if (error.response && error.response.status > 400){ //status 404,502这种提示
-            Vue.$Modal.info({
+            Modal.info({
                 title: '网络故障',
                 content: '网络故障' + error.response.status + '，请稍后再试',
             })
             setTimeout(()=>{
-                Vue.$Modal.remove()
+                Modal.remove()
             },1000)
           } else{
               console.log(error)
