@@ -50,7 +50,8 @@ module.exports = {
           'modules': path.resolve(__dirname, '../src/modules'),
           'config': path.resolve(__dirname, '../src/config'),
           'scss': path.resolve(__dirname, '../src/assets/scss'),
-          'router': path.resolve(__dirname, '../src/router'),          
+          'router': path.resolve(__dirname, '../src/router'),
+          'utils': path.resolve(__dirname, '../src/utils'),
       },
   },
   module: {

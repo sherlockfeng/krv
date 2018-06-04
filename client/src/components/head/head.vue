@@ -3,7 +3,14 @@
 	<div class="app">
       <header class="head">
         <div class="head-inner">
-
+          <a class="head-title">
+            精选
+          </a>
+          <nav class="head-nav">
+            <a class="nav-item" :class="{'is-active': hrefText === 'zhihu'}">知乎</a>
+            <a class="nav-item" :class="{'is-active': hrefText === 'douban'}">豆瓣</a>
+            <a class="nav-item" :class="{'is-active': hrefText === 'my'}">我的</a>
+          </nav>
         </div>
       </header>
   </div>
@@ -13,13 +20,19 @@
 	import 'iview/dist/styles/iview.css';
 	import { Button, Table } from 'iview';
   export default {
+    props: {
+      hrefText: {
+        type: String,
+        required: false,
+        default: 'zhihu'
+      }
+    },
 		data () {
 			return {
-	
 			}
 		},
 		created () {
-
+      const vm = this
 
 		},
 		methods: {
@@ -40,19 +53,39 @@
     background-clip: content-box;
     .head-inner{
       position: relative;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       width: 1000px;
       height: 52px;
       padding: 0 16px;
       margin: 0 auto;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
-      transition: -webkit-transform .3s;
       transition: transform .3s;
       transition: transform .3s,-webkit-transform .3s;
+      .head-title {
+        color: inherit;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      .head-nav {
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        margin-right: 18px;
+        margin-left: 27px;
+        color: #999;
+        .nav-item {
+          padding: 0 15px;
+          font-size: 15px;
+          line-height: 30px;
+          color: #8590a6;
+          &:first-child {
+            padding-left: 0px;
+          }
+          &.is-active {
+            color: #444;
+          }
+        }
+      }
     }
   }
 </style>

@@ -59,10 +59,6 @@ var webpackConfig = merge(baseWebpackConfig, {
                                   addDependencyTo: webpack,
                               }),
                               precss, //postcss使用sass语法,不然语法报错
-                              px2rem({ //px转rem
-                                  remUnit: 100,
-                                  baseDpr: 2
-                              }),
                               autoprefixer({ browsers: ["last 8 version"] })
                             ]
                         }
