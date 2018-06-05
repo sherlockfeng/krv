@@ -17,8 +17,6 @@
 </template>
 
 <script>
-	import 'iview/dist/styles/iview.css';
-	import { Button, Table } from 'iview';
   export default {
     props: {
       hrefText: {
@@ -44,13 +42,14 @@
 
 <style lang="scss">
   .head {
-    position: relative;
+    position: fixed;
     z-index: 100;
     min-width: 1032px;
     overflow: hidden;
     background: #fff;
     box-shadow: 0 1px 3px rgba(26,26,26,.1);
     background-clip: content-box;
+    width: 100%;
     .head-inner{
       position: relative;
       display: flex;

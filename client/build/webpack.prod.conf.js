@@ -59,10 +59,10 @@ var webpackConfig = merge(baseWebpackConfig, {
                                   addDependencyTo: webpack,
                               }),
                               precss, //postcss使用sass语法,不然语法报错
-                              px2rem({ //px转rem
-                                  remUnit: 100,
-                                  baseDpr: 2
-                              }),
+                            //   px2rem({ //px转rem
+                            //       remUnit: 100,
+                            //       baseDpr: 2
+                            //   }),
                               autoprefixer({ browsers: ["last 8 version"] })
                             ]
                         }
@@ -157,10 +157,11 @@ if (config.build.productionGzip) {
 var htmlWebpackPlugins = [] // 多html对应多个js入口文件
 
 Object.keys(webpackConfig.entry).forEach(function(name, i) {
+    
     // https://github.com/ampedandwired/html-webpack-plugin
-    var pageName = name.split('/')[1]
+    var pageName = name.split('\\')[1]
     htmlWebpackPlugins.push(new HtmlWebpackPlugin({
-        filename: path.resolve(__dirname, '../dist/events/pages/' + pageName + '/' + 'index.html'),
+        filename: path.resolve(__dirname, '../dist/pages/' + pageName + '/' + 'index.html'),
         template: './src/' + name + '/app.html',
         chunks: ['pages/vendor', 'pages/manifest', name],
         chunksSortMode: 'none',

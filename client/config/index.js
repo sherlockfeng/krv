@@ -4,9 +4,9 @@ var path = require('path')
 module.exports = {
     build: {
         env: { NODE_ENV: '"production"' },
-        assetsRoot: path.resolve(__dirname, '../dist/events'),
+        assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: './',
-        assetsPublicPath: '//gmm.sdoprofile.com/events/',
+        assetsPublicPath: '../../',
         productionSourceMap: true,
         // Gzip off by default as many popular static hosts such as
         // Surge or Netlify already gzip all static assets for you.

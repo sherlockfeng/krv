@@ -18,7 +18,7 @@ app.use(bodyparser({
 
 app.use(json())
 
-app.use(require('koa-static')(__dirname + '/static'))
+app.use(require('koa-static')(__dirname + '/client/dist'))
 
 app.use(views(__dirname + '/views', {
   extension: 'pug'

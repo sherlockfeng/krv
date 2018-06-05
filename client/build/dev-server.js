@@ -26,16 +26,16 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
 //热更新，自动刷新
 var hotMiddleware = require('webpack-hot-middleware')(compiler)
 
-// var ipAddr = '101.227.1.123'//huidu
-// server.use('/gate', proxy(ipAddr, {
-//     proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
-//         proxyReqOpts.headers['Host'] = 'gmm.sdo.com'
-//         return proxyReqOpts
-//     },
-//     proxyReqPathResolver: function(req) {
-//         return '/gate' + require('url').parse(req.url).path
-//     }
-// }))
+var ipAddr = 'localhost:3000'//huidu
+server.use('/api', proxy(ipAddr, {
+    proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
+        proxyReqOpts.headers['Host'] = 'localhost'
+        return proxyReqOpts
+    },
+    proxyReqPathResolver: function(req) {
+        return '/api' + require('url').parse(req.url).path
+    }
+}))
 
 server.use(devMiddleware);
 server.use(hotMiddleware);

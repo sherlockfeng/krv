@@ -23,11 +23,11 @@ const Utils = {
           timeout: 10000,
           params,
       }).then((json) => {
-          let {return_code,return_message} = json.data
-          if (return_code == 0){
+          let {code,message} = json.data
+          if (code == 0){
               callback && callback(json.data)
           } else {
-              errorback ? errorback(error) : Utils.toast(return_message,2000)
+              errorback ? errorback(error) : Modal.info({title: '接口异常',content:message})
           }
       }).catch((error) => {
           if (error.message.indexOf('timeout') > -1) { //超时提示
