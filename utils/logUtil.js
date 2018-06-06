@@ -7,8 +7,8 @@ log4js.configure(log_config);
 
 let logUtil = {};
 
-let errorLogger = log4js.getLogger('errorLogger');
-let resLogger = log4js.getLogger('resLogger');
+let errorLogger = log4js.getLogger('error');
+let resLogger = log4js.getLogger();
 
 //封装错误日志
 logUtil.logError = function (ctx, error, resTime) {
@@ -66,7 +66,6 @@ let formatError = function (ctx, err, resTime) {
 
     //错误信息结束
     logText += "*************** error log end ***************" + "\n";
-
     return logText;
 };
 

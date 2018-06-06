@@ -12,7 +12,6 @@ var errorFileName = "error"
 //错误日志输出完整路径
 var errorLogPath = baseLogPath + errorPath + "/" + errorFileName;
 
- 
 
 //响应日志目录
 var responsePath = "/response"
@@ -22,7 +21,6 @@ var responseFileName = "response"
 
 //响应日志输出完整路径
 var responseLogPath = baseLogPath + responsePath + "/" + responseFileName;
-
 
 module.exports = {
 
@@ -43,17 +41,17 @@ module.exports = {
         }
     },
     categories: {
-        default: {
-            appenders: [
-                "resLogger"
-            ],
-            level: "all"
-        },
         error: {
             appenders: [
                 "errorLogger"
             ],
             level: 'error'
+        },
+        default: {
+            appenders: [
+                "resLogger"
+            ],
+            level: "info"
         }
     }
 }

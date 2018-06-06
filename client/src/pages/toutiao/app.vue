@@ -13,7 +13,7 @@
   export default {
 		data () {
 			return {
-				hrefText: 'zhihu',
+				hrefText: 'toutiao',
 				articleList: []
 			}
 		},

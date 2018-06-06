@@ -7,8 +7,8 @@
             精选
           </a>
           <nav class="head-nav">
-            <a class="nav-item" :class="{'is-active': hrefText === 'zhihu'}">知乎</a>
-            <a class="nav-item" :class="{'is-active': hrefText === 'douban'}">豆瓣</a>
+            <a class="nav-item" :class="{'is-active': hrefText === 'zhihu'}" href="/events/pages/zhihu/index.html">知乎</a>
+            <a class="nav-item" :class="{'is-active': hrefText === 'toutiao'}" href="/events/pages/toutiao/index.html">今日头条</a>
             <a class="nav-item" :class="{'is-active': hrefText === 'my'}">我的</a>
           </nav>
         </div>
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  import 'iview/dist/styles/iview.css'
   export default {
     props: {
       hrefText: {
